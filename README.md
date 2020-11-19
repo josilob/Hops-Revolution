@@ -8,7 +8,7 @@ Webapp for  listing breweries across the country and pinning them on google maps
 // Links to be added
 <br/>
 
-### User Story:
+## User Story:
 
 **User**: *As a user, I would love to take a look at breweries in the area, visit and checkout their crafted selection*   
 **Frontend**:  *Welcomes the user with the animated landing page, displayed row of the popular breweries/beers and offers to research further by clicking on any of those*  
