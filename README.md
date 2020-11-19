@@ -8,15 +8,40 @@ Webapp for  listing breweries across the country and pinning them on google maps
 // Links to be added
 <br/>
 
+### User Story:
+
+**User**: *As a user, I would love to take a look at breweries in the area, visit and checkout their crafted selection*   
+**Frontend**:  *Welcomes the user with the animated landing page, displayed row of the popular breweries/beers and offers to research further by clicking on any of those*  
+
+**User**: This looks cool, I love everything I see offered, but how do I find this brewery.   
+**Frontend**:  One sec, let us help you with showing you our coordinates. Loads Google map location.
+
+**User Story**: I want to learn more about products this brewery has to offer.
+**Frontend**: By clicking on any of the beers, you can find out more with 3rd party API call in the back.
+ 
+**User Story**: I've seen a lot, but I couldn't find this brewery I heard a lot about.
+**Backend**:  Here, help us maintain our DB up to date with the form we will provide you with. If you do this, we will do our best to add it to our selection.
+
+**User Story**: I saw that your list is not entirely accurate, this product is no more available.
+**Backend**:  Provides full CRUD functionality. One click...and it's gone!
+
+**User Story**: I like your app a lot, is there a way to permanently save breweries and beers I tried. I'd love to start my own beer-bucket-list.
+**Backend**:  Provides account creation with option to add all the beers & breweries to the >checked-out< list.
+
+
+
 
 ## Time/Priority Matrix
 
 |  Feature  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
-| Frontend structure | H | hrs | hrs |
+| Preparation and Planning | H | hrs |  |
+| React components/structure | H | hrs | hrs |
 | Backend setup | H | hrs |  |
 | APIs | H | hrs |  |
-| Next.JS | H | hrs |  |
+| Server and Connections | H | hrs | hrs |
+| Switch, Routes and Links | H | hrs |  |
+| Responsiveness | H | hrs |  |
 | Front/Back Deployment | H | hrs | hrs |
 | Next.JS | H | hrs |  |
 | Google maps | H | hrs | hrs|
