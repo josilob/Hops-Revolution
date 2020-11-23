@@ -95,6 +95,9 @@ const Navigation = styled.header`
 		font-size: 1em;
 		text-decoration: none;
 	}
+	nav a:visited{
+		color: #222
+	}
 	nav .active {
 		color: tomato;
 	}
