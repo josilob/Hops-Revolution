@@ -37,11 +37,14 @@ function Footer() {
 	return (
 		<StyledFooter>
 			<div className='footerIcons'>
-				<a href='https://github.com/josilob' target='_blank'>
-					<i class='fab fa-github'></i>
+				<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
+					<i className='fab fa-github'></i>
 				</a>
-				<a href='https://www.linkedin.com/in/josilo/' target='_blank'>
-					<i class='fab fa-linkedin'></i>
+				<a
+					href='https://www.linkedin.com/in/josilo/'
+					target='_blank'
+					rel='noreferrer'>
+					<i className='fab fa-linkedin'></i>
 				</a>
 			</div>
 			<hr className='footerLine' />

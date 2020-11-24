@@ -189,21 +189,23 @@ function Nav(props) {
 					aria-hidden='true'
 					onClick={(e) => handleToggle(e)}
 				/>
-				<ul className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
+				<ul
+					className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}
+					onClick={(e) => handleToggle(e)}>
 					<NavLink activeClassName='active' to='/'>
-						<li>home</li>
+						<li>Home</li>
 					</NavLink>
 					<NavLink activeClassName='active' to='/breweries'>
-						<li>breweries</li>
+						<li>Breweries</li>
 					</NavLink>
-					<NavLink activeClassName='active' to='/beers'>
-						<li>beers</li>
+					<NavLink activeClassName='active' to='/beer'>
+						<li>Beer</li>
 					</NavLink>
 					<NavLink activeClassName='active' to='/form'>
-						<li>form</li>
+						<li>Form</li>
 					</NavLink>
 					<NavLink activeClassName='active' to='/about'>
-						<li>about</li>
+						<li>About</li>
 					</NavLink>
 				</ul>
 			</nav>
