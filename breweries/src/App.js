@@ -2,16 +2,17 @@ import './App.css';
 import React, { useState } from 'react';
 import Home from './components/Home';
 import Nav from './components/Nav';
-import Footer from './components/Footer';
 import Breweries from './components/Breweries';
+import Location from './components/Location';
 import Beer from './components/Beer';
-import About from './components/About';
 import Form from './components/Form';
+import About from './components/About';
+import Footer from './components/Footer';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	const [selectedBrewery, setSelectedBrewery] = useState({});
-
+	//console.log(selectedBrewery);
 	return (
 		<div className='App'>
 			<Nav />
@@ -38,6 +39,9 @@ function App() {
 					</Route>
 					<Route path='/about'>
 						<About />
+					</Route>
+					<Route path='/location'>
+						<Location selectedBrewery={selectedBrewery} />
 					</Route>
 				</Switch>
 			</main>

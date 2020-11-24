@@ -31,7 +31,7 @@ const Navigation = styled.header`
 	.logo p {
 		width: 250px;
 		display: block;
-		padding-left: 30px;
+		padding-left: 10px;
 	}
 
 	.logo em {
@@ -197,6 +197,9 @@ function Nav(props) {
 					</NavLink>
 					<NavLink activeClassName='active' to='/breweries'>
 						<li>Breweries</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/location'>
+						<li>Location</li>
 					</NavLink>
 					<NavLink activeClassName='active' to='/beer'>
 						<li>Beer</li>
