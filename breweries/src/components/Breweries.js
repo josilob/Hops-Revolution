@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Breweries.css';
 
 function Breweries(props) {
@@ -11,26 +13,29 @@ function Breweries(props) {
 		const data = await response.json();
 		console.log(data);
 		setBreweries(() => data);
+		if (data.length > 0) setInput('');
 	};
 
 	let breweryListing = breweries.map((brewery) => {
 		return (
-			<div
-				className='brewCard'
-				key={brewery.id}
-				onClick={() => props.setSelectedBrewery(brewery)}>
-				<h3>{brewery.name}</h3>
-				<hr />
-				<p>
-					Located at: {brewery.street},{brewery.city}, {brewery.state}
-				</p>
-				<p>Website: {brewery.website_url}</p>
-				<p>Brewery type: {brewery.brewery_type}</p>
-				<br />
-			</div>
+			<Link to='/location'>
+				<div
+					className='brewCard'
+					key={brewery.id}
+					onClick={() => props.setSelectedBrewery(brewery)}>
+					<h3>{brewery.name}</h3>
+					<hr />
+					<p>
+						Located at: {brewery.street},{brewery.city}, {brewery.state}
+					</p>
+					<p>Website: {brewery.website_url}</p>
+					<p>Brewery type: {brewery.brewery_type}</p>
+					<br />
+				</div>
+			</Link>
 		);
 	});
-	//console.log(props.selectedBrewery);
+	console.log(props.selectedBrewery);
 	return (
 		<div className='search-bar-container'>
 			<div className='input-group mb-0'>
@@ -46,7 +51,6 @@ function Breweries(props) {
 					type='button'
 					onClick={() => {
 						getBreweries();
-						if (breweries.length > 0) setInput('');
 					}}>
 					Search
 				</button>

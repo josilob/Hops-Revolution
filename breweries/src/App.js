@@ -13,6 +13,10 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
 	const [selectedBrewery, setSelectedBrewery] = useState({});
 	//console.log(selectedBrewery);
+	const [center, setCenter] = React.useState({
+		lat: selectedBrewery.latitude,
+		lng: selectedBrewery.longitude,
+	});
 	return (
 		<div className='App'>
 			<Nav />
@@ -41,7 +45,7 @@ function App() {
 						<About />
 					</Route>
 					<Route path='/location'>
-						<Location selectedBrewery={selectedBrewery} />
+						<Location selectedBrewery={selectedBrewery} center={center} />
 					</Route>
 				</Switch>
 			</main>
