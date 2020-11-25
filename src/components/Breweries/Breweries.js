@@ -37,8 +37,8 @@ function Breweries(props) {
 	});
 	console.log(props.selectedBrewery);
 	return (
-		<div className='search-bar-container'>
-			<div className='input-group mb-0'>
+		<div className='brewery-container'>
+			<div className='input-field'>
 				<input
 					className='searchBar'
 					type='text'

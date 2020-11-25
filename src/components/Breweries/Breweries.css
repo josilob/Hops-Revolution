@@ -7,3 +7,6 @@
 .brewCard hr {
 	width: 70%;
 }
+.brewery-container {
+	min-height: calc(100vh - 140px);
+}
