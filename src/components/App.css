@@ -7,6 +7,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	/* height: 100%; */
+	overflow: hidden;
 }
 .centerContainer {
 	min-height: calc(100vh - 160px);
