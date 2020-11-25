@@ -1,18 +1,17 @@
 import './App.css';
 import React, { useState } from 'react';
-import Home from './components/Home';
-import Nav from './components/Nav';
-import Breweries from './components/Breweries';
-import Location from './components/Location';
-import Beer from './components/Beer';
-import Form from './components/Form';
-import About from './components/About';
-import Footer from './components/Footer';
+import Home from './Home/Home';
+import Nav from './Nav/Nav';
+import Breweries from './Breweries/Breweries';
+import Location from './Location/Location';
+import Beer from './Beer/Beer';
+import Form from './Form/Form';
+import About from './About/About';
+import Footer from './Footer/Footer';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	const [selectedBrewery, setSelectedBrewery] = useState({});
-	//console.log(selectedBrewery);
 	const [center, setCenter] = React.useState({
 		lat: selectedBrewery.latitude,
 		lng: selectedBrewery.longitude,

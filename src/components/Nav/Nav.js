@@ -1,8 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
+function Nav(props) {
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	const handleToggle = (e) => {
+		e.preventDefault();
+		setIsExpanded(!isExpanded);
+	};
+
+	return (
+		<Navigation>
+			<div className='logo'>
+				<Link to='/'>
+					<p>Bojan's Brewery App</p>
+					<em>
+						<div className='letterhead'>
+							<span className='name'>Brew</span>
+							<span className='gray'>App</span>
+						</div>
+					</em>
+				</Link>
+			</div>
+			<nav className='nav'>
+				<i
+					className='fa fa-bars'
+					aria-hidden='true'
+					onClick={(e) => handleToggle(e)}
+				/>
+				<ul
+					className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}
+					onClick={(e) => handleToggle(e)}>
+					<NavLink activeClassName='active' to='/'>
+						<li>Home</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/breweries'>
+						<li>Breweries</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/location'>
+						<li>Location</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/beer'>
+						<li>Beer</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/form'>
+						<li>Form</li>
+					</NavLink>
+					<NavLink activeClassName='active' to='/about'>
+						<li>About</li>
+					</NavLink>
+				</ul>
+			</nav>
+		</Navigation>
+	);
+}
 const Navigation = styled.header`
 	max-width: 100vw;
 	border-bottom: 10px solid #222;
@@ -161,59 +214,4 @@ const Navigation = styled.header`
 		
 	}
 `;
-
-function Nav(props) {
-	const [isExpanded, setIsExpanded] = React.useState(false);
-
-	const handleToggle = (e) => {
-		e.preventDefault();
-		setIsExpanded(!isExpanded);
-	};
-
-	return (
-		<Navigation>
-			<div className='logo'>
-				<Link to='/'>
-					<p>Bojan's Brewery App</p>
-					<em>
-						<div className='letterhead'>
-							<span className='name'>Brew</span>
-							<span className='gray'>App</span>
-						</div>
-					</em>
-				</Link>
-			</div>
-			<nav className='nav'>
-				<i
-					className='fa fa-bars'
-					aria-hidden='true'
-					onClick={(e) => handleToggle(e)}
-				/>
-				<ul
-					className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}
-					onClick={(e) => handleToggle(e)}>
-					<NavLink activeClassName='active' to='/'>
-						<li>Home</li>
-					</NavLink>
-					<NavLink activeClassName='active' to='/breweries'>
-						<li>Breweries</li>
-					</NavLink>
-					<NavLink activeClassName='active' to='/location'>
-						<li>Location</li>
-					</NavLink>
-					<NavLink activeClassName='active' to='/beer'>
-						<li>Beer</li>
-					</NavLink>
-					<NavLink activeClassName='active' to='/form'>
-						<li>Form</li>
-					</NavLink>
-					<NavLink activeClassName='active' to='/about'>
-						<li>About</li>
-					</NavLink>
-				</ul>
-			</nav>
-		</Navigation>
-	);
-}
-
 export default Nav;

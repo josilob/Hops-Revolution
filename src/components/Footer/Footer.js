@@ -1,5 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+
+function Footer() {
+	return (
+		<StyledFooter>
+			<div className='footerIcons'>
+				<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
+					<i className='fab fa-github'></i>
+				</a>
+				<a
+					href='https://www.linkedin.com/in/josilo/'
+					target='_blank'
+					rel='noreferrer'>
+					<i className='fab fa-linkedin'></i>
+				</a>
+			</div>
+			<hr className='footerLine' />
+			<h4>Bojan Josilo</h4>
+			<p>© Copyright 2020</p>
+		</StyledFooter>
+	);
+}
+export default Footer;
+
 const StyledFooter = styled.footer`
 	max-width: 100vw;
 	background-color: black;
@@ -32,26 +55,3 @@ const StyledFooter = styled.footer`
 		color: white;
 	}
 `;
-
-function Footer() {
-	return (
-		<StyledFooter>
-			<div className='footerIcons'>
-				<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
-					<i className='fab fa-github'></i>
-				</a>
-				<a
-					href='https://www.linkedin.com/in/josilo/'
-					target='_blank'
-					rel='noreferrer'>
-					<i className='fab fa-linkedin'></i>
-				</a>
-			</div>
-			<hr className='footerLine' />
-			<h4>Bojan Josilo</h4>
-			<p>© Copyright 2020</p>
-		</StyledFooter>
-	);
-}
-
-export default Footer;
