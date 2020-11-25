@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BREWERY_API } from '../../variables';
 
 import './Breweries.css';
 
@@ -8,7 +9,7 @@ function Breweries(props) {
 	const [input, setInput] = useState('');
 
 	const getBreweries = async () => {
-		const baseURL = `https://api.openbrewerydb.org/breweries?by_city=`;
+		const baseURL = BREWERY_API;
 		const response = await fetch(baseURL + input.toLowerCase());
 		const data = await response.json();
 		console.log(data);

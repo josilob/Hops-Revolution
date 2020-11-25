@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocationMarker from './LocationMarker';
+import { GGL_KEY } from '../../variables';
 
 import './Location.css';
 
-function Location({ selectedBrewery, center, zoom, defCenter }) {
+function Location({ selectedBrewery, zoom, defCenter }) {
 	//const [locationInfo, setLocationInfo] = useState(null);
 	const [coordinates, setCoordinates] = useState({
 		lat: parseFloat(selectedBrewery.latitude),
@@ -14,7 +15,7 @@ function Location({ selectedBrewery, center, zoom, defCenter }) {
 	return (
 		<div className='map'>
 			<GoogleMapReact
-				bootstrapURLKeys={{ key: 'AIzaSyDD6NTrbCGHOeD6ndRsVWXdsfLs7tmjR7A' }}
+				bootstrapURLKeys={{ key: GGL_KEY }}
 				yesIWantToUseGoogleMapApiInternals
 				defaultCenter={examineCoords ? coordinates : defCenter}
 				defaultZoom={zoom}>

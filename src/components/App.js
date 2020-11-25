@@ -16,6 +16,9 @@ function App() {
 		lat: selectedBrewery.latitude,
 		lng: selectedBrewery.longitude,
 	});
+
+	console.log(process.env.REACT_APP_WEATHER_API_KEY);
+
 	return (
 		<div className='App'>
 			<Nav />
