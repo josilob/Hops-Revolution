@@ -7,17 +7,17 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	/* height: 100%; */
-	overflow: hidden;
 }
 .centerContainer {
 	min-height: calc(100vh - 160px);
 }
 .home-pint {
-	height: 60px;
+	height: 55px;
+	width: 65px;
 }
 .map {
 	width: 100vw;
-	height: 89.3vh;
+	height: calc(100vh - 140px);
 	position: relative;
 }
 .location-icon {

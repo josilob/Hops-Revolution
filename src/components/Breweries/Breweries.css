@@ -2,11 +2,22 @@
 	width: 250px;
 	height: 30px;
 }
-.brewCard {
+.brew-card {
 }
-.brewCard hr {
-	width: 70%;
+.brewery-main {
+	min-height: calc(100vh - 100px);
+	margin-bottom: 100px;
 }
-.brewery-container {
-	min-height: calc(100vh - 140px);
+.card-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	margin: 20px 10px;
+}
+.brewery-list {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }

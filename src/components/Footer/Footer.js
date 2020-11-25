@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StyledFooter } from '../Styled-Components/StyledComponents';
 
 function Footer() {
 	return (
@@ -22,36 +23,3 @@ function Footer() {
 	);
 }
 export default Footer;
-
-const StyledFooter = styled.footer`
-	max-width: 100vw;
-	background-color: black;
-	height: 70px;
-	align-content: center;
-
-	.footerLine {
-		background-color: white;
-		width: 90%;
-		height: 1px;
-		margin: 0 auto;
-	}
-	h4,
-	p {
-		color: white;
-	}
-	* {
-		margin: 0px;
-		padding: 0px;
-	}
-	.footerIcons {
-		width: 100px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
-		font-size: 25px;
-		color: white;
-	}
-	.footerIcons a:visited {
-		color: white;
-	}
-`;

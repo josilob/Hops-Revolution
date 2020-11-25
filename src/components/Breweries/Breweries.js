@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Card } from '../Styled-Components/StyledComponents';
+
 import { Link } from 'react-router-dom';
 import { BREWERY_API } from '../../variables';
 
@@ -19,26 +22,41 @@ function Breweries(props) {
 
 	let breweryListing = breweries.map((brewery) => {
 		return (
-			<Link to='/location'>
-				<div
-					className='brewCard'
+			<div className='card-container'>
+				<Link
+					to='/location'
 					key={brewery.id}
 					onClick={() => props.setSelectedBrewery(brewery)}>
-					<h3>{brewery.name}</h3>
-					<hr />
-					<p>
-						Located at: {brewery.street},{brewery.city}, {brewery.state}
-					</p>
-					<p>Website: {brewery.website_url}</p>
-					<p>Brewery type: {brewery.brewery_type}</p>
-					<br />
-				</div>
-			</Link>
+					<Card className='brew-card'>
+						<div className='container'>
+							<div className='front'>
+								<div className='inner'>
+									<p>{brewery.name}</p>
+									<span>{brewery.state}</span>
+								</div>
+							</div>
+							<div className='back'>
+								<div className='inner'>
+									<p>
+										{brewery.street}
+										<br />
+										{brewery.city}
+										<br />
+										{brewery.state}
+										<br />
+									</p>
+								</div>
+							</div>
+						</div>
+					</Card>
+				</Link>
+			</div>
 		);
 	});
 	console.log(props.selectedBrewery);
+
 	return (
-		<div className='brewery-container'>
+		<div className='brewery-main'>
 			<div className='input-field'>
 				<input
 					className='searchBar'
@@ -59,7 +77,7 @@ function Breweries(props) {
 					Console
 				</button>
 			</div>
-			<div>{breweryListing}</div>
+			<div className='brewery-list'>{breweryListing}</div>
 		</div>
 	);
 }
