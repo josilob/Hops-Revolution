@@ -11,9 +11,9 @@ body {
 .centerContainer {
 	min-height: calc(100vh - 160px);
 }
-.home-pint {
-	height: 55px;
-	width: 65px;
+.home-logo {
+	height: 50px;
+	width: 55px;
 }
 .map {
 	width: 100vw;

@@ -1,0 +1,9 @@
+.home {
+	background-image: url('background-pint.jpeg');
+	background-position: center center;
+	min-height: calc(100vh - 140px);
+	min-width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

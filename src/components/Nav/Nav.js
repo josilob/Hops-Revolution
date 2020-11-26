@@ -13,9 +13,9 @@ function Nav() {
 			<Navbar>
 				<NavLink to='/'>
 					<img
-						src='beer-pint.png'
+						src='home-logo.png'
 						alt='logo'
-						className='home-pint'
+						className='home-logo'
 						onClick={closeBurger}
 					/>
 				</NavLink>

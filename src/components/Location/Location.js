@@ -18,8 +18,8 @@ function Location({ selectedBrewery, zoom, defCenter }) {
 				defaultCenter={examineCoords ? coordinates : defCenter}
 				defaultZoom={zoom}>
 				<LocationMarker
-					lat={selectedBrewery.latitude}
-					lng={selectedBrewery.longitude}
+					lat={selectedBrewery.latitude || null}
+					lng={selectedBrewery.longitude || null}
 				/>
 			</GoogleMapReact>
 		</div>

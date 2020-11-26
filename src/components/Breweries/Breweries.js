@@ -32,7 +32,11 @@ function Breweries(props) {
 							<div className='front'>
 								<div className='inner'>
 									<p>{brewery.name}</p>
-									<span>{brewery.state}</span>
+									<span>
+										{brewery.city}
+										<br />
+										{brewery.state}
+									</span>
 								</div>
 							</div>
 							<div className='back'>
@@ -40,9 +44,9 @@ function Breweries(props) {
 									<p>
 										{brewery.street}
 										<br />
-										{brewery.city}
+										{parseFloat(brewery.latitude).toFixed(2)}
 										<br />
-										{brewery.state}
+										{parseFloat(brewery.longitude).toFixed(2)}
 										<br />
 									</p>
 								</div>
@@ -66,6 +70,7 @@ function Breweries(props) {
 					aria-label='Search'
 					onChange={(e) => setInput(e.target.value)}
 				/>
+				{/*  */}
 				<button
 					type='button'
 					onClick={() => {

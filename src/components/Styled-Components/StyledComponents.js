@@ -104,7 +104,6 @@ export const StyledFooter = styled.footer`
 `;
 
 export const Card = styled.div`
-
 	.container {
 		transform-style: preserve-3d;
 		width: 200px;
@@ -112,6 +111,7 @@ export const Card = styled.div`
 
 	.front,
 	.back {
+		background-image: url('cork-coaster.png');
 		background-size: cover;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
@@ -120,16 +120,15 @@ export const Card = styled.div`
 		transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
 		backface-visibility: hidden;
 		text-align: center;
-		min-height: 280px;
-		height: auto;
-		border-radius: 10px;
+		min-height: 200px;
+		height: 200px;
+		border-radius: 50%;
 		color: #fff;
 		font-size: 20px;
 	}
 
 	.back {
-		background: #cedce7;
-		background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+		background-image: url('globe.png');
 	}
 
 	.front:after {
@@ -141,15 +140,15 @@ export const Card = styled.div`
 		height: 100%;
 		content: '';
 		display: block;
-		opacity: 0.6;
+		opacity: 0.2;
 		background-color: #000;
 		backface-visibility: hidden;
-		border-radius: 10px;
+		border-radius: 50%;
 	}
 	.container:hover .front,
 	.container:hover .back {
 		transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-		transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+		transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 	}
 
 	.back {
@@ -194,7 +193,7 @@ export const Card = styled.div`
 
 	.front .inner p {
 		font-size: 20px;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		position: relative;
 	}
 

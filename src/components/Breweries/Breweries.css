@@ -6,13 +6,19 @@
 }
 .brewery-main {
 	min-height: calc(100vh - 100px);
-	margin-bottom: 100px;
+	background-image: url('https://images.unsplash.com/photo-1574577456839-2c5208588f6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
+	background-position: center center;
+
+	min-width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .card-container {
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	margin: 20px 10px;
+	margin: 20px 5px;
 }
 .brewery-list {
 	width: 100%;
@@ -21,3 +27,5 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+
+/* ######################## */

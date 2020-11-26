@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import beerMug from '@iconify-icons/emojione/beer-mug';
 
 function LocationMarker() {
