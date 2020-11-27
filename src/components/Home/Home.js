@@ -11,7 +11,7 @@ function Home() {
 				With each thirst-quenching elbow bend.
 				<br />
 				Beer’s so frothy, smooth and cold <br />
-				It’s paradise–pure liquid gold.
+				It’s paradise–pure liquid gold."
 			</h2>
 		</div>
 	);

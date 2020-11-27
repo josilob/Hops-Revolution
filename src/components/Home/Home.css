@@ -14,11 +14,12 @@
 	color: #f4bb6a;
 	line-height: 2;
 	align-content: center;
-	font-size: 28px;
+	font-size: 30px;
 	display: inline;
 	position: absolute;
-	left: 5%;
-	top: 50px;
+	left: 3%;
+	top: 30px;
+	font-family: 'Piedra', cursive;
 }
 @media screen and (max-width: 768px) {
 }
