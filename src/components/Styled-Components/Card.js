@@ -3,6 +3,7 @@ export const Card = styled.div`
 	.container {
 		transform-style: preserve-3d;
 		width: 200px;
+		font-family: 'Piedra', cursive;
 	}
 
 	.front,
@@ -36,7 +37,7 @@ export const Card = styled.div`
 		height: 100%;
 		content: '';
 		display: block;
-		opacity: 0.5;
+		opacity: 0.55;
 		background-color: #000;
 		backface-visibility: hidden;
 		border-radius: 50%;
@@ -91,6 +92,7 @@ export const Card = styled.div`
 		font-size: 20px;
 		margin-bottom: 1rem;
 		position: relative;
+		line-height: 1.6;
 	}
 
 	.front .inner p:after {
@@ -108,8 +110,12 @@ export const Card = styled.div`
 
 	.front .inner span {
 		color: rgba(255, 255, 255, 0.7);
-		font-family: 'Montserrat';
+		font-family: 'Courgette', cursive;
 		font-weight: 300;
+	}
+	.coords {
+		font-family: 'Courgette', cursive;
+
 	}
 
 	@media screen and (max-width: 64rem) {

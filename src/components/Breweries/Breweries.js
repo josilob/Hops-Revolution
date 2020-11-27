@@ -26,7 +26,7 @@ function Breweries(props) {
 						<div className='container'>
 							<div className='front'>
 								<div className='inner'>
-									<p>{brewery.name}</p>
+									<p className='brw-name'>{brewery.name}</p>
 									<span>
 										{brewery.city}
 										<br />
@@ -39,10 +39,12 @@ function Breweries(props) {
 									<p>
 										{brewery.street}
 										<br />
-										lat: {parseFloat(brewery.latitude).toFixed(2)}
-										<br />
-										lng: {parseFloat(brewery.longitude).toFixed(2)}
-										<br />
+										<span className='coords'>
+											lat: {parseFloat(brewery.latitude).toFixed(2)}
+											<br />
+											lng: {parseFloat(brewery.longitude).toFixed(2)}
+											<br />
+										</span>
 									</p>
 								</div>
 							</div>
