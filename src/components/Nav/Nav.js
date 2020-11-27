@@ -68,7 +68,7 @@ function Nav() {
 export default Nav;
 
 const NavLink = styled(Link)`
-	color: #fff;
+	color: #f4bb6a;
 	display: flex;
 	align-items: center;
 	text-decoration: none;

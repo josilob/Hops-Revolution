@@ -9,14 +9,14 @@ export const StyledFooter = styled.footer`
 	align-content: center;
 
 	.footerLine {
-		background-color: white;
+		background-color: #f4bb6a;
 		width: 90%;
 		height: 1px;
 		margin: 0 auto;
 	}
 	h4,
 	p {
-		color: white;
+		color: #f4bb6a;
 		margin: 0;
 		font-family: 'Courgette', cursive;
 	}
@@ -27,9 +27,9 @@ export const StyledFooter = styled.footer`
 		display: flex;
 		justify-content: space-around;
 		font-size: 23px;
-		color: white;
+		color: #f4bb6a;
 	}
 	.footerIcons a:visited {
-		color: white;
+		color: #f4bb6a;
 	}
 `;
