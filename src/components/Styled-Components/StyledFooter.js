@@ -18,6 +18,7 @@ export const StyledFooter = styled.footer`
 	p {
 		color: white;
 		margin: 0;
+		font-family: 'Courgette', cursive;
 	}
 
 	.footerIcons {
@@ -25,7 +26,7 @@ export const StyledFooter = styled.footer`
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-around;
-		font-size: 25px;
+		font-size: 23px;
 		color: white;
 	}
 	.footerIcons a:visited {

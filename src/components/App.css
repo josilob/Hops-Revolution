@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* cursive */
 @import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-
+/* navlinks */
 * {
 	/* border: 1px solid red; */
 }
@@ -46,6 +46,10 @@ body {
 	width: 45px;
 	padding-right: 20px;
 	padding-left: 0px;
+}
+.tab-name {
+	font-size: 22px;
+	font-family: 'Piedra', cursive;
 }
 
 @media screen and (max-width: 768px) {

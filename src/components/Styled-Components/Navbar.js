@@ -16,7 +16,7 @@ export const Navbar = styled.nav`
 			height: 100vh;
 			position: absolute;
 			top: 59px;
-			left: -100%;
+			left: -105%;
 			opacity: 1;
 			transition: all 0.5s ease;
 		}
@@ -35,8 +35,6 @@ export const Navbar = styled.nav`
 			width: 100%;
 			display: table;
 			height: 35px;
-		}
-		.nav-link span {
 		}
 	}
 `;

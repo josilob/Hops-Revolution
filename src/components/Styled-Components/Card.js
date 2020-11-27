@@ -7,8 +7,8 @@ export const Card = styled.div`
 
 	.front,
 	.back {
-		background-image: url('cork-coaster.png');
-		background-size: cover;
+		background-image: url('coaster2.png');
+		background-size: 106%;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
 		background-position: center;
@@ -36,7 +36,7 @@ export const Card = styled.div`
 		height: 100%;
 		content: '';
 		display: block;
-		opacity: 0.2;
+		opacity: 0.5;
 		background-color: #000;
 		backface-visibility: hidden;
 		border-radius: 50%;

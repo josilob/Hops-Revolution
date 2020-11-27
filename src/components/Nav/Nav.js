@@ -30,35 +30,35 @@ function Nav() {
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
-						<span>Breweries</span>
+						<span className='tab-name'>Breweries</span>
 					</NavLink>
 					<NavLink
 						to='/location'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
-						<span>Location</span>
+						<span className='tab-name'>Location</span>
 					</NavLink>
 					<NavLink
 						to='/beer'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
-						<span>Beer</span>
+						<span className='tab-name'>Beer</span>
 					</NavLink>
 					<NavLink
 						to='/form'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
-						<span>Form</span>
+						<span className='tab-name'>Form</span>
 					</NavLink>
 					<NavLink
 						to='/about'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
-						<span>About</span>
+						<span className='tab-name'>About</span>
 					</NavLink>
 				</NavMenu>
 			</Navbar>
@@ -77,5 +77,7 @@ const NavLink = styled(Link)`
 	cursor: pointer;
 	&.active {
 		color: #15cdfc;
+	}
+	@media screen and (max-width: 768px) {
 	}
 `;
