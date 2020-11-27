@@ -1,14 +1,13 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-import beerMug from '@iconify-icons/emojione/beer-mug';
+import mapMarkerSolid from '@iconify-icons/clarity/map-marker-solid';
 
 function LocationMarker() {
 	return (
 		<div className='location-marker'>
-			<Icon icon={beerMug} className='location-icon' />
+			<Icon icon={mapMarkerSolid} className='location-icon' />
 		</div>
 	);
 }
 
 export default LocationMarker;
-//onClick={onClick}

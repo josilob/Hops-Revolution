@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Card } from '../Styled-Components/StyledComponents';
-
+import { Card } from '../Styled-Components/Card';
 import { Link } from 'react-router-dom';
 import { BREWERY_API } from '../../variables';
 
@@ -22,11 +20,8 @@ function Breweries(props) {
 
 	let breweryListing = breweries.map((brewery) => {
 		return (
-			<div className='card-container'>
-				<Link
-					to='/location'
-					key={brewery.id}
-					onClick={() => props.setSelectedBrewery(brewery)}>
+			<div className='card-container' key={brewery.id}>
+				<Link to='/location' onClick={() => props.setSelectedBrewery(brewery)}>
 					<Card className='brew-card'>
 						<div className='container'>
 							<div className='front'>
@@ -44,9 +39,9 @@ function Breweries(props) {
 									<p>
 										{brewery.street}
 										<br />
-										{parseFloat(brewery.latitude).toFixed(2)}
+										lat: {parseFloat(brewery.latitude).toFixed(2)}
 										<br />
-										{parseFloat(brewery.longitude).toFixed(2)}
+										lng: {parseFloat(brewery.longitude).toFixed(2)}
 										<br />
 									</p>
 								</div>
@@ -70,16 +65,13 @@ function Breweries(props) {
 					aria-label='Search'
 					onChange={(e) => setInput(e.target.value)}
 				/>
-				{/*  */}
+
 				<button
 					type='button'
 					onClick={() => {
 						getBreweries();
 					}}>
-					Search
-				</button>
-				<button type='button' onClick={() => console.log(breweries)}>
-					Console
+					SUBMIT
 				</button>
 			</div>
 			<div className='brewery-list'>{breweryListing}</div>

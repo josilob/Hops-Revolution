@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Navbar, Bars, NavMenu } from '../Styled-Components/StyledComponents';
+import { Navbar } from '../Styled-Components/Navbar';
+import { Bars } from '../Styled-Components/Bars';
+import { NavMenu } from '../Styled-Components/NavMenu';
 
 function Nav() {
 	const [click, setClick] = useState(false);
@@ -11,9 +13,9 @@ function Nav() {
 	return (
 		<>
 			<Navbar>
-				<NavLink to='/'>
+				<NavLink to='/' id='home'>
 					<img
-						src='home-logo.png'
+						src='beer-btn.png'
 						alt='logo'
 						className='home-logo'
 						onClick={closeBurger}
@@ -24,18 +26,18 @@ function Nav() {
 				</Bars>
 				<NavMenu className={click ? 'nav-menu active' : 'nav-menu'}>
 					<NavLink
-						to='/location'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
-						<span>Location</span>
-					</NavLink>
-					<NavLink
 						to='/breweries'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
 						<span>Breweries</span>
+					</NavLink>
+					<NavLink
+						to='/location'
+						activeStyle
+						onClick={closeBurger}
+						className='nav-link'>
+						<span>Location</span>
 					</NavLink>
 					<NavLink
 						to='/beer'
@@ -71,7 +73,7 @@ const NavLink = styled(Link)`
 	align-items: center;
 	text-decoration: none;
 	padding: 0 1rem;
-	height: 100%;
+	height: 35px;
 	cursor: pointer;
 	&.active {
 		color: #15cdfc;

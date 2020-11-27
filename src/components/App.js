@@ -12,7 +12,7 @@ import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	const [selectedBrewery, setSelectedBrewery] = useState({});
-	const [center, setCenter] = React.useState({
+	const [center, setCenter] = useState({
 		lat: selectedBrewery.latitude,
 		lng: selectedBrewery.longitude,
 	});

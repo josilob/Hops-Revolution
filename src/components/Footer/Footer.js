@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import { StyledFooter } from '../Styled-Components/StyledComponents';
+import { StyledFooter } from '../Styled-Components/StyledFooter';
 
 function Footer() {
 	return (
-		<StyledFooter>
+		<StyledFooter className='footer'>
 			<div className='footerIcons'>
 				<a href='https://github.com/josilob' target='_blank' rel='noreferrer'>
 					<i className='fab fa-github'></i>
