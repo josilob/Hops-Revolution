@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const Bars = styled.span`
 	display: none;
-	color: #fff;
+	color: #f4bb6a;
 	@media screen and (max-width: 768px) {
 		display: block;
 		position: absolute;

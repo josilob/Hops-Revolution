@@ -19,7 +19,19 @@ function Location({ selectedBrewery, zoom, defCenter }) {
 				yesIWantToUseGoogleMapApiInternals
 				defaultCenter={examineCoords ? coordinates : defCenter}
 				defaultZoom={zoom}
-				options={{ mapStyles }}>
+				options={{
+					styles: [
+						{
+							featureType: 'all',
+							elementType: 'labels',
+							stylers: [
+								{
+									visibility: '#on',
+								},
+							],
+						},
+					],
+				}}>
 				<LocationMarker
 					lat={selectedBrewery.latitude || null}
 					lng={selectedBrewery.longitude || null}

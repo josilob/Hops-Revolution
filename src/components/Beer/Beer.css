@@ -1,9 +1,40 @@
-.beer {
-	background-image: url('beer.jpeg');
-	background-position: center;
-	min-height: calc(100vh - 140px);
-	min-width: 100%;
+.beer-main {
+	min-height: calc(100vh - 120px);
+	background-image: url('https://images.unsplash.com/photo-1596865668258-242a087887ab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1369&q=80');
+	background-position: center center;
+	min-width: 98vw;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+.beer-main .input-field {
+	margin: 0 auto;
+	height: 90px;
+}
+.beer-name {
+	margin: 0;
+}
+
+.beer-list {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 70px;
+}
+
+.beer-container {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	margin: 10px 10px;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 450px) {
 }
