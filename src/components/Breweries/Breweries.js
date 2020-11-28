@@ -10,15 +10,24 @@ function Breweries(props) {
 	const [input, setInput] = useState('');
 
 	const getBreweries = async () => {
-		const baseURL = BREWERY_API;
-		const response = await fetch(baseURL + input.toLowerCase());
-		const data = await response.json();
-		console.log(data);
-		setBreweries(() => data);
-		if (data.length > 0) setInput('');
+		try {
+			const baseURL = BREWERY_API;
+			const response = await fetch(baseURL + input.toLowerCase());
+			const data = await response.json();
+			console.log(data);
+			setBreweries(() => data);
+			//console.log(breweries);
+			if (data.length > 0) setInput('');
+		} catch (error) {
+			//console.log(error);
+		}
+	};
+	const onFormSubmit = (e) => {
+		e.preventDefault();
+		getBreweries();
 	};
 
-	let breweryListing = breweries.map((brewery) => {
+	const breweryListing = breweries.map((brewery) => {
 		return (
 			<div className='card-container' key={brewery.id}>
 				<Link to='/location' onClick={() => props.setSelectedBrewery(brewery)}>
@@ -54,27 +63,21 @@ function Breweries(props) {
 			</div>
 		);
 	});
-	console.log(props.selectedBrewery);
 
 	return (
 		<div className='brewery-main'>
 			<div className='input-field'>
-				<input
-					className='searchBar'
-					type='text'
-					value={input}
-					placeholder='Search by City'
-					aria-label='Search'
-					onChange={(e) => setInput(e.target.value)}
-				/>
-
-				<button
-					type='button'
-					onClick={() => {
-						getBreweries();
-					}}>
-					SUBMIT
-				</button>
+				<form onSubmit={onFormSubmit}>
+					<input
+						className='searchBar'
+						type='text'
+						value={input}
+						placeholder='Search by City'
+						// aria-label='Search'
+						onChange={(e) => setInput(e.target.value)}
+					/>
+					<button type='submit'>SUBMIT</button>
+				</form>
 			</div>
 			<div className='brewery-list'>{breweryListing}</div>
 		</div>

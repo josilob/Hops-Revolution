@@ -26,6 +26,14 @@ function Nav() {
 				</Bars>
 				<NavMenu className={click ? 'nav-menu active' : 'nav-menu'}>
 					<NavLink
+						exact
+						to='/'
+						activeStyle
+						onClick={closeBurger}
+						className='nav-link'>
+						<span className='tab-name'>Home</span>
+					</NavLink>
+					<NavLink
 						to='/breweries'
 						activeStyle
 						onClick={closeBurger}
@@ -46,13 +54,7 @@ function Nav() {
 						className='nav-link'>
 						<span className='tab-name'>Beer</span>
 					</NavLink>
-					<NavLink
-						to='/form'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
-						<span className='tab-name'>Form</span>
-					</NavLink>
+
 					<NavLink
 						to='/about'
 						activeStyle
