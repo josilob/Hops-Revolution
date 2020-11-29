@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { BEER_KEY } from '../../variables';
 import { BeerCard } from '../Styled-Components/BeerCard';
-import { Link } from 'react-router-dom';
 import Loader from '../Loader';
 import './Beer.css';
+import BeerDetails from '../BeerDetails/BeerDetails';
 
 function Beer() {
 	const [beers, setBeers] = useState([]);
 	const [input, setInput] = useState('');
 	const [showLoader, setShowLoader] = useState(false);
+	const [beerDetails, setBeerDetails] = useState();
 
 	const getBeers = async () => {
 		try {
@@ -28,13 +29,26 @@ function Beer() {
 		}
 	};
 
+	const readDetails = (e) => {
+		setBeerDetails(e);
+		console.log(beerDetails);
+	};
+
+	const clearDetails = () => {
+		setBeerDetails(null);
+	};
+
 	const onFormSubmit = (e) => {
 		e.preventDefault();
 		getBeers();
 	};
+
 	const beerList = beers?.map((beer) => {
 		return (
-			<div className='beer-container' key={beer.id}>
+			<div
+				className='beer-container'
+				key={beer.id}
+				onClick={() => readDetails(beer)}>
 				<BeerCard className='beer-card'>
 					<div className='container'>
 						<div className='front'>
@@ -63,17 +77,11 @@ function Beer() {
 				</form>
 			</div>
 			<div className='beer-list'>{showLoader ? <Loader /> : beerList}</div>
+			{beerDetails && (
+				<BeerDetails data={beerDetails} clearDetails={clearDetails} />
+			)}
 		</div>
 	);
 }
 
 export default Beer;
-
-//https://sandbox-api.brewerydb.com/v2/search?q=bud%20light&type=beer&key=c5b2321b631174d2a6ba826849e3950d
-
-//http://api.brewerydb.com/v2/endpoint/?key=c5b2321b631174d2a6ba826849e3950d
-
-//WORKING PART BELOW
-//http://api.brewerydb.com/v2/search?q=Bud%20Light&type=beer&key=c5b2321b631174d2a6ba826849e3950d
-
-// http://api.brewerydb.com/v2/{endpoint}/?key=abcdef

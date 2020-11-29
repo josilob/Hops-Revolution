@@ -2,16 +2,22 @@ import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocationMarker from './LocationMarker';
 import { GGL_KEY } from '../../variables';
-import mapStyles from './mapStyles';
 import './Location.css';
 
 function Location({ selectedBrewery, zoom, defCenter }) {
-	//const [locationInfo, setLocationInfo] = useState(null);
+	const [locationInfo, setLocationInfo] = useState(selectedBrewery);
 	const [coordinates, setCoordinates] = useState({
 		lat: parseFloat(selectedBrewery.latitude),
 		lng: parseFloat(selectedBrewery.longitude),
 	});
 	const examineCoords = selectedBrewery.longitude;
+	const readInfo = () => {
+		setLocationInfo(selectedBrewery);
+		console.log(selectedBrewery);
+	};
+	const clearInfo = () => {
+		setLocationInfo(null);
+	};
 	return (
 		<div className='map'>
 			<GoogleMapReact
@@ -35,8 +41,20 @@ function Location({ selectedBrewery, zoom, defCenter }) {
 				<LocationMarker
 					lat={selectedBrewery.latitude || null}
 					lng={selectedBrewery.longitude || null}
+					onClick={readInfo}
 				/>
 			</GoogleMapReact>
+			{locationInfo && (
+				<div className='infobox'>
+					{<p>{selectedBrewery.name}</p>}
+					{<p>Brewery type: {selectedBrewery.brewery_type}</p>}
+					{<p>Phone: {selectedBrewery.phone}</p>}
+					{<p>ZIP: {selectedBrewery.postal_code}</p>}
+					{<p>Street: {selectedBrewery.street}</p>}
+					<p>page: {selectedBrewery.website_url}</p>
+					<button onClick={clearInfo}>Close</button>
+				</div>
+			)}
 		</div>
 	);
 }

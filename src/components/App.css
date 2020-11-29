@@ -17,7 +17,12 @@ body {
 .App {
 	text-align: center;
 }
-
+.location-marker {
+	width: 0;
+}
+.location-marker:hover {
+	cursor: pointer;
+}
 .centerContainer {
 	min-height: calc(100vh - 160px);
 }

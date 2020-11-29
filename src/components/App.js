@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Home from './Home/Home';
 import Nav from './Nav/Nav';
 import Breweries from './Breweries/Breweries';
-import Location from './Location/Location';
+import Location from './Map/Location';
 import Beer from './Beer/Beer';
 import Form from './Form/Form';
 import About from './About/About';
