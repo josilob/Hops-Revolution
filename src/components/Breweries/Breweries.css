@@ -1,7 +1,7 @@
 .brewery-main {
 	min-height: calc(100vh - 100px);
-	background-image: url('https://cdn.hipwallpaper.com/i/85/94/7QzKhI.jpg');
-	background-position: center -50px;
+	background-image: url('brew-map.jpg');
+	background-position: center center;
 	min-width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -16,7 +16,6 @@
 	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 	border-radius: 15px;
 	opacity: 0.8;
-	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 	margin: 20px 10px;
 	font-size: 20px;
 	font-family: 'Courgette', cursive;

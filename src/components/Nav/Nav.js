@@ -40,13 +40,13 @@ function Nav() {
 						className='nav-link'>
 						<span className='tab-name'>Breweries</span>
 					</NavLink>
-					<NavLink
+					{/* <NavLink
 						to='/location'
 						activeStyle
 						onClick={closeBurger}
 						className='nav-link'>
 						<span className='tab-name'>Location</span>
-					</NavLink>
+					</NavLink> */}
 					<NavLink
 						to='/beer'
 						activeStyle
