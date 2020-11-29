@@ -17,8 +17,22 @@
 	line-height: 1;
 	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: 10px;
+	font-family: 'Courgette', cursive;
+	font-weight: 300;
 	font-size: 18px;
 	color: #fff;
+}
+.infobox button {
+	font-family: 'Courgette', cursive;
+}
+.brewery-web {
+	color: white;
+}
+.brewery-web:hover {
+	cursor: pointer;
+}
+.brewery-web:visited {
+	color: white;
 }
 @media screen and (max-width: 768px) {
 	.map {

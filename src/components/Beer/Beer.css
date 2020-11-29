@@ -26,7 +26,9 @@
 	justify-content: space-evenly;
 	margin-bottom: 70px;
 }
-
+.beer-container:hover {
+	cursor: pointer;
+}
 .beer-container {
 	display: flex;
 	flex-flow: row;

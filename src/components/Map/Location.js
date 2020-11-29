@@ -51,7 +51,15 @@ function Location({ selectedBrewery, zoom, defCenter }) {
 					{<p>Phone: {selectedBrewery.phone}</p>}
 					{<p>ZIP: {selectedBrewery.postal_code}</p>}
 					{<p>Street: {selectedBrewery.street}</p>}
-					<p>page: {selectedBrewery.website_url}</p>
+					<a
+						href={selectedBrewery.website_url}
+						target='_blank'
+						rel='noreferrer'
+						className='brewery-web'>
+						{selectedBrewery.website_url}
+					</a>
+					<br />
+					<br />
 					<button onClick={clearInfo}>Close</button>
 				</div>
 			)}
