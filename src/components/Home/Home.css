@@ -11,11 +11,12 @@
 
 .welcome-container {
 	background: rgba(60, 60, 60, 0.6);
-	width: 400px;
-	height: 180px;
+	width: 600px;
+	height: 280px;
 	border-radius: 30px;
-	margin: 5% auto;
+	margin: 2% auto;
 	display: flex;
+	flex-flow: column;
 	justify-content: center;
 	align-items: center;
 	letter-spacing: 3px;
@@ -25,6 +26,8 @@
 	font-family: 'Piedra', cursive;
 	color: #f4bb6a;
 	font-size: 42px;
+	line-height: normal;
+	margin: 20px auto;
 }
 .home-hops {
 	width: 50%;
