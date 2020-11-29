@@ -4,7 +4,7 @@ export const StyledFooter = styled.footer`
 	bottom: 0;
 	max-width: 100vw;
 	width: 100%;
-	background-color: black;
+	background-color: #242222;
 	height: 70px;
 	align-content: center;
 

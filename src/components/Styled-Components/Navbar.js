@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Navbar = styled.nav`
-	background: #000;
+	background: #242222;
 	height: 60px;
 	display: flex;
 	justify-content: space-around;

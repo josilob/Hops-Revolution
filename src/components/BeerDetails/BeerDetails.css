@@ -1,14 +1,37 @@
 .beer-details {
-	display: flex;
-	flex-flow: row;
-	margin-bottom: 180px;
+	background: rgba(48, 40, 35, 0.7);
+	border-radius: 20px;
+	max-width: 700px;
+	justify-content: center;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 120px;
 }
 .beer-description {
-	max-width: 400px;
+	width: 95%;
+	font-family: 'Courgette', cursive;
+	font-size: 22px;
+	color: white;
+	line-height: 1.5;
+	margin: 0 auto;
 }
 .beer-label {
 	max-width: 350px;
 	display: block;
 	width: 100%;
 	height: auto;
+}
+.bottle-div {
+	width: 40%;
+	align-content: center;
+}
+.details-btn {
+	width: 60px;
+	position: absolute;
+	bottom: 5px;
+	right: calc(50% - 30px);
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	font-family: 'Piedra', cursive;
 }

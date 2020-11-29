@@ -15,12 +15,12 @@ function Beer() {
 		try {
 			setShowLoader(true);
 			const CORS = 'http://cors-anywhere.herokuapp.com/';
-			const beerURL = `${CORS}https://sandbox-api.brewerydb.com/v2/search?q=${input.toLowerCase()}&type=beer&key=${BEER_KEY}`;
+			const beerURL = `${CORS}https://sandbox-api.brewerydb.com/v2/search?q=${input.toLowerCase()}&type=beer&withBreweries=Y&key=${BEER_KEY}`;
 
 			const response = await fetch(CORS + beerURL);
 			const data = await response.json();
 			setBeers(data.data);
-			console.log(data.data);
+			//console.log(data.data);
 			if (data.data.length > 0) setInput('');
 		} catch (error) {
 			console.log(error);
@@ -76,9 +76,15 @@ function Beer() {
 					<button type='submit'>SUBMIT</button>
 				</form>
 			</div>
-			<div className='beer-list'>{showLoader ? <Loader /> : beerList}</div>
+			<div className='beer-list'>
+				{showLoader ? <Loader className='fetch-loader' /> : beerList}
+			</div>
 			{beerDetails && (
-				<BeerDetails data={beerDetails} clearDetails={clearDetails} />
+				<BeerDetails
+					data={beerDetails}
+					clearDetails={clearDetails}
+					className='details-box'
+				/>
 			)}
 		</div>
 	);

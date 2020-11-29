@@ -1,18 +1,19 @@
 .beer-main {
-	min-height: calc(100vh - 120px);
+	min-height: calc(100vh + 120px);
 	background-image: url('https://images.unsplash.com/photo-1596865668258-242a087887ab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1369&q=80');
 	background-position: center center;
 	min-width: 98vw;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
-	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	border: 1px solid transparent;
 }
 .beer-main .input-field {
 	margin: 0 auto;
 	height: 90px;
+	display: block;
 }
 .beer-name {
 	margin: 0;
@@ -31,6 +32,10 @@
 	flex-flow: row;
 	flex-wrap: wrap;
 	margin: 10px 10px;
+}
+
+.details-box {
+	justify-items: center;
 }
 
 @media screen and (max-width: 768px) {
