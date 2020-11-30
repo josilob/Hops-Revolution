@@ -13,7 +13,6 @@ function Location({ selectedBrewery, zoom, defCenter }) {
 	const examineCoords = selectedBrewery.longitude;
 	const readInfo = () => {
 		setLocationInfo(selectedBrewery);
-		console.log(selectedBrewery);
 	};
 	const clearInfo = () => {
 		setLocationInfo(null);

@@ -16,10 +16,9 @@ function Breweries(props) {
 			const data = await response.json();
 			console.log(data);
 			setBreweries(() => data);
-			//console.log(breweries);
 			if (data.length > 0) setInput('');
 		} catch (error) {
-			//console.log(error);
+			console.log(error);
 		}
 	};
 	const onFormSubmit = (e) => {

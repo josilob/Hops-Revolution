@@ -25,41 +25,23 @@ function Nav() {
 					<i className={click ? 'fas fa-times' : 'fas fa-bars'} />
 				</Bars>
 				<NavMenu className={click ? 'nav-menu active' : 'nav-menu'}>
-					<NavLink
-						exact
-						to='/'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
+					<NavLink exact to='/' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>Home</span>
 					</NavLink>
-					<NavLink
-						to='/beer'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
+
+					<NavLink to='/beer' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>Beer</span>
 					</NavLink>
-					<NavLink
-						to='/breweries'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
+
+					<NavLink to='/breweries' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>Breweries</span>
 					</NavLink>
-					{/* <NavLink
-						to='/location'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
-						<span className='tab-name'>Location</span>
-					</NavLink> */}
 
-					<NavLink
-						to='/about'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
+					<NavLink to='/location' onClick={closeBurger} className='nav-link'>
+						<span className='tab-name'>Location</span>
+					</NavLink>
+
+					<NavLink to='/about' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>About</span>
 					</NavLink>
 				</NavMenu>

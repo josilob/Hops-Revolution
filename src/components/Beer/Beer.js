@@ -20,7 +20,7 @@ function Beer({ setSelectedBrewery }) {
 			const response = await fetch(CORS + beerURL);
 			const data = await response.json();
 			setBeers(data.data);
-			//console.log(data.data);
+
 			if (data.data.length > 0) setInput('');
 		} catch (error) {
 			console.log(error);
@@ -31,7 +31,6 @@ function Beer({ setSelectedBrewery }) {
 
 	const readDetails = (e) => {
 		setBeerDetails(e);
-		console.log(beerDetails);
 	};
 
 	const clearDetails = () => {
