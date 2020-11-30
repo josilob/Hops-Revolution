@@ -14,7 +14,7 @@ function Beer({ setSelectedBrewery }) {
 	const getBeers = async () => {
 		try {
 			setShowLoader(true);
-			const CORS = 'http://cors-anywhere.herokuapp.com/';
+			const CORS = 'https://cors-anywhere.herokuapp.com/';
 			const beerURL = `${CORS}https://sandbox-api.brewerydb.com/v2/search?q=${input.toLowerCase()}&type=beer&withBreweries=Y&key=${BEER_KEY}`;
 
 			const response = await fetch(CORS + beerURL);
