@@ -12,8 +12,11 @@
 	font-family: 'Courgette', cursive;
 	font-size: 22px;
 	color: white;
-	line-height: 1.5;
+	line-height: 1.2;
 	margin: 0 auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .beer-label {
 	max-width: 350px;
@@ -34,4 +37,9 @@
 	color: white;
 	border-radius: 5px;
 	font-family: 'Piedra', cursive;
+}
+@media screen and (max-width: 768px) {
+	.beer-description {
+		font-size: 16px;
+	}
 }
