@@ -5,7 +5,7 @@ import Loader from '../Loader';
 import './Beer.css';
 import BeerDetails from '../BeerDetails/BeerDetails';
 
-function Beer() {
+function Beer({ setSelectedBrewery }) {
 	const [beers, setBeers] = useState([]);
 	const [input, setInput] = useState('');
 	const [showLoader, setShowLoader] = useState(false);
@@ -75,6 +75,7 @@ function Beer() {
 				<BeerDetails
 					data={beerDetails}
 					clearDetails={clearDetails}
+					setSelectedBrewery={setSelectedBrewery}
 					className='details-box'
 				/>
 			)}

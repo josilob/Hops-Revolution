@@ -31,10 +31,11 @@ export const Navbar = styled.nav`
 		}
 		.nav-link {
 			text-align: center;
-			padding-top: 30px;
+			padding: 30px 0;
 			width: 100%;
 			display: table;
-			height: 35px;
+			height: 25px;
+			margin-top: 20px;
 		}
 	}
 `;
