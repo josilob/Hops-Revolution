@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card } from '../Styled-Components/Card';
+import { BreweryCard } from '../Styled-Components/BreweryCard';
 import { Link } from 'react-router-dom';
 import { BREWERY_API } from '../../variables';
 
@@ -31,7 +31,7 @@ function Breweries(props) {
 		return (
 			<div className='card-container' key={brewery.id}>
 				<Link to='/location' onClick={() => props.setSelectedBrewery(brewery)}>
-					<Card className='brew-card'>
+					<BreweryCard className='brew-card'>
 						<div className='container'>
 							<div className='front'>
 								<div className='inner'>
@@ -58,7 +58,7 @@ function Breweries(props) {
 								</div>
 							</div>
 						</div>
-					</Card>
+					</BreweryCard>
 				</Link>
 			</div>
 		);

@@ -45,20 +45,12 @@ function Beer() {
 
 	const beerList = beers?.map((beer) => {
 		return (
-			<div
+			<BeerCard
 				className='beer-container'
 				key={beer.id}
 				onClick={() => readDetails(beer)}>
-				<BeerCard className='beer-card'>
-					<div className='container'>
-						<div className='front'>
-							<div className='inner'>
-								<p className='beer-name'>{beer.name}</p>
-							</div>
-						</div>
-					</div>
-				</BeerCard>
-			</div>
+				<p className='beer-name'>{beer.name}</p>
+			</BeerCard>
 		);
 	});
 

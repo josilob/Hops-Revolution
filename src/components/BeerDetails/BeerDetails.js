@@ -9,6 +9,8 @@ function BeerDetails({ data, clearDetails }) {
 				<br />
 				Brewery : {data.breweries[0].name}
 				<br />
+				Place : {data.breweries[0].locations[0].locality}
+				<br />
 				Style : {data.style.name}
 				<br />
 				ABV : {data.abv}

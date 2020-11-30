@@ -34,6 +34,13 @@ function Nav() {
 						<span className='tab-name'>Home</span>
 					</NavLink>
 					<NavLink
+						to='/beer'
+						activeStyle
+						onClick={closeBurger}
+						className='nav-link'>
+						<span className='tab-name'>Beer</span>
+					</NavLink>
+					<NavLink
 						to='/breweries'
 						activeStyle
 						onClick={closeBurger}
@@ -47,13 +54,6 @@ function Nav() {
 						className='nav-link'>
 						<span className='tab-name'>Location</span>
 					</NavLink> */}
-					<NavLink
-						to='/beer'
-						activeStyle
-						onClick={closeBurger}
-						className='nav-link'>
-						<span className='tab-name'>Beer</span>
-					</NavLink>
 
 					<NavLink
 						to='/about'

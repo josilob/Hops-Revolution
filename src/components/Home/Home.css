@@ -10,11 +10,11 @@
 }
 
 .welcome-container {
-	background: rgba(60, 60, 60, 0.6);
+	background: rgba(60, 60, 60, 0.65);
 	width: 600px;
 	height: 280px;
 	border-radius: 30px;
-	margin: 2% auto;
+	margin: 75px auto;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -26,16 +26,40 @@
 	font-family: 'Piedra', cursive;
 	color: #f4bb6a;
 	font-size: 42px;
-	line-height: normal;
 	margin: 20px auto;
 }
 .home-hops {
-	width: 50%;
+	width: 650px;
 }
 
 @media screen and (max-width: 768px) {
-	.toast {
-		position: relative;
-		margin: 150px auto;
+	.welcome-container {
+		width: 70%;
+		height: 240px;
+	}
+
+	.home-hops {
+		width: 70%;
+	}
+
+	.welcome {
+		font-size: 32px;
+		margin: 15px auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.welcome-container {
+		width: 90%;
+		height: 160px;
+	}
+
+	.home-hops {
+		width: 70%;
+	}
+
+	.welcome {
+		font-size: 25px;
+		margin: 8px auto;
 	}
 }

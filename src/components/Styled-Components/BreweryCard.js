@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const Card = styled.div`
+export const BreweryCard = styled.div`
 	.container {
 		transform-style: preserve-3d;
 		width: 200px;

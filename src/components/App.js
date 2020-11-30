@@ -5,7 +5,6 @@ import Nav from './Nav/Nav';
 import Breweries from './Breweries/Breweries';
 import Location from './Map/Location';
 import Beer from './Beer/Beer';
-import Form from './Form/Form';
 import About from './About/About';
 import Footer from './Footer/Footer';
 import { Route, Switch } from 'react-router-dom';
@@ -37,9 +36,6 @@ function App() {
 					/>
 					<Route path='/beer'>
 						<Beer />
-					</Route>
-					<Route path='/form'>
-						<Form />
 					</Route>
 					<Route path='/about'>
 						<About />
