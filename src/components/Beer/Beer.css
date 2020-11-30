@@ -1,5 +1,5 @@
 .beer-main {
-	min-height: calc(100vh + 120px);
+	min-height: calc(100vh - 120px);
 	background-image: url('beer-bg.jpeg');
 	background-position: center center;
 	min-width: 98vw;

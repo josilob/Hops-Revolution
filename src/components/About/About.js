@@ -18,7 +18,7 @@ function About() {
 				<p className='about-text'>
 					Main functionality is based around being able to look up beers across
 					the country, finding more information about each, and the happy place
-					of their creation, with aditional contact informations.
+					of their creation...with some aditional informations.
 				</p>
 			</div>
 		</div>
