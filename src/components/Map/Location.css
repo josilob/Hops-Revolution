@@ -10,7 +10,7 @@
 .infobox {
 	position: absolute;
 	top: 10px;
-	right: calc(50vw - 200px);
+	right: 50px;
 	width: 400px;
 	min-height: 200px;
 	padding: 0;
@@ -35,7 +35,9 @@
 	color: white;
 }
 @media screen and (max-width: 768px) {
-	.map {
-		height: 100vh;
+	.infobox {
+		width: 250px;
+		font-size: 16px;
+		right: calc(50vw - 125px);
 	}
 }

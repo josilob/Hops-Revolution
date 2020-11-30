@@ -5,7 +5,7 @@ import { GGL_KEY } from '../../variables';
 import './Location.css';
 
 function Location({ selectedBrewery, zoom, defCenter }) {
-	const [locationInfo, setLocationInfo] = useState(selectedBrewery);
+	const [locationInfo, setLocationInfo] = useState(null);
 	const [coordinates, setCoordinates] = useState({
 		lat: parseFloat(selectedBrewery.latitude),
 		lng: parseFloat(selectedBrewery.longitude),
