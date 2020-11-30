@@ -1,17 +1,59 @@
-.about {
-	background-image: url('about-bg.jpeg');
+.About {
+	line-height: 1.7;
+	background: url('aboutback.jpeg');
 	background-position: center center;
-	min-height: calc(100vh - 140px);
-	min-width: 100%;
+	min-height: 92vh;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-@keyframes myfirst {
-	from {
-		opacity: 0.2;
+.about-text {
+	font-family: 'Courgette', cursive;
+	font-size: 26px;
+	text-align: center;
+	margin-top: 0px;
+	width: 55%;
+	margin: 0 auto;
+	color: white;
+}
+.ga-logo {
+	display: block;
+	width: 20%;
+	margin: 10px auto;
+}
+.faded-about {
+	padding-top: 20px;
+	width: 100%;
+	height: 100vh;
+	background: rgba(48, 40, 35, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+	.about-text {
+		font-size: 20px;
+		width: 70%;
+		margin: 0 auto;
 	}
-	to {
-		opacity: 1;
+	.ga-logo {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.about-text {
+		font-size: 16px;
+		width: 70%;
+	}
+	.ga-logo {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1700px) {
+	.About {
+		padding-top: 100px;
+	}
+	.about-text {
+		line-height: 3;
 	}
 }
