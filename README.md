@@ -36,13 +36,6 @@ Possible utilization of MaterializeCSS and some animation libraries.
 
 **Backend**: Here, help us maintain our DB up to date with the form we will provide you with. If you do this, we will do our best to add it to our selection.
 
-**User Story**: I saw that your list is not entirely accurate, this product is no more available.
-
-**Backend**: Provides full CRUD functionality. One click...and it's gone!
-
-**User Story**: I like your app a lot, is there a way to permanently save breweries and beers I tried. I'd love to start my own beer-bucket-list.
-
-**Backend**: Provides account creation with option to add all the beers & breweries to the >checked-out< list.
 
 ## Time/Priority Matrix
 
