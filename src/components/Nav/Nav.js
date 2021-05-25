@@ -29,9 +29,9 @@ function Nav() {
 						<span className='tab-name'>Home</span>
 					</NavLink>
 
-					<NavLink to='/beer' onClick={closeBurger} className='nav-link'>
+					{/* <NavLink to='/beer' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>Beer</span>
-					</NavLink>
+					</NavLink> */}
 
 					<NavLink to='/breweries' onClick={closeBurger} className='nav-link'>
 						<span className='tab-name'>Breweries</span>

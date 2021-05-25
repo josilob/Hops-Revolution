@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import Nav from './Nav/Nav';
 import Breweries from './Breweries/Breweries';
 import Location from './Map/Location';
-import Beer from './Beer/Beer';
+// import Beer from './Beer/Beer';
 import About from './About/About';
 import Footer from './Footer/Footer';
 import { Route, Switch } from 'react-router-dom';
@@ -34,9 +34,9 @@ function App() {
 							/>
 						)}
 					/>
-					<Route path='/beer'>
+					{/* <Route path='/beer'>
 						<Beer />
-					</Route>
+					</Route> */}
 					<Route path='/about'>
 						<About />
 					</Route>

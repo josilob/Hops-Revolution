@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BEER_KEY } from '../../variables';
+// import { BEER_KEY } from '../../variables';
 import { BeerCard } from '../Styled-Components/BeerCard';
 import Loader from '../Loader';
 import './Beer.css';
@@ -14,14 +14,14 @@ function Beer({ setSelectedBrewery }) {
 	const getBeers = async () => {
 		try {
 			setShowLoader(true);
-			const CORS = 'https://cors-anywhere.herokuapp.com/';
-			const beerURL = `${CORS}https://sandbox-api.brewerydb.com/v2/search?q=${input.toLowerCase()}&type=beer&withBreweries=Y&key=${BEER_KEY}`;
+			// const CORS = 'https://cors-anywhere.herokuapp.com/';
+			const beerURL = `https://api.punkapi.com/v2/beers?beer_name=${input.toLowerCase()}`;
 
-			const response = await fetch(CORS + beerURL);
+			const response = await fetch(beerURL);
 			const data = await response.json();
-			setBeers(data.data);
+			setBeers(data);
 
-			if (data.data.length > 0) setInput('');
+			if (data.length > 0) setInput('');
 		} catch (error) {
 			console.log(error);
 		} finally {
