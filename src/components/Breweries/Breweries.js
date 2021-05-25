@@ -13,7 +13,7 @@ function Breweries(props) {
 			const baseURL = BREWERY_API;
 			const response = await fetch(baseURL + input.toLowerCase());
 			const data = await response.json();
-			console.log(data);
+			// console.log(data);
 			setBreweries(() => data);
 			if (data.length > 0) setInput('');
 		} catch (error) {
